@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 });
 
 const staticFiles = path.join(__dirname, "public");
-app.use("public/", express.static(staticFiles));
+app.use("/public", express.static(staticFiles));
 
 app.use(staticFiles);
 
