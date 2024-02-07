@@ -1,10 +1,13 @@
 let express = require("express");
 let app = express();
+const path = require("path");
+
+const absolutePath = path.join(__dirname, "views", "index.html");
 
 app.get("/", (req, res) => {
-  const responseString = "Hello Express";
-  console.log(responseString);
-  res.send(responseString);
+  res.sendFile(absolutePath);
 });
+
+module.exports = app;
 
 module.exports = app;
