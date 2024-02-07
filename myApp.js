@@ -6,7 +6,8 @@ const path = require("path");
 
 // app.use("/public", express.static(publicDirectoryPath));
 
-app.use("/json");
+const publicRepo = path.join(__dirname, "public");
+app.use("/json"), express.static(publicRepo);
 
 const handler = (req, res) => {
   jsonData = { message: "Hello json" };
