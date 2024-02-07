@@ -6,12 +6,12 @@ const path = require("path");
 
 // app.use("/public", express.static(publicDirectoryPath));
 
-app.use('/json');
+app.use("/json");
 
- const handler (req, res)  => {
-  jsonData = {"message": "Hello json"}
+const handler = (req, res) => {
+  jsonData = { message: "Hello json" };
   res.json(jsonData);
-}
-app.get('/json', handler)
+};
+app.get("/json", handler);
 
 module.exports = app;
