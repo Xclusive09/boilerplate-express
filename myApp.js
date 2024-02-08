@@ -11,7 +11,7 @@ app.use("/json", express.static(publicRepo));
 const handler = (req, res) => {
   const message = "Hello json";
 
-  if (process.env.MESSAGE_STYLE === "uppercase") {
+  if (process.env.MESSAGE_STYLE === "HELLO JSON") {
     message = "Hello json".toUpperCase();
   }
 
