@@ -13,6 +13,8 @@ const handler = (req, res) => {
 
   if (process.env.MESSAGE_STYLE === "uppercase") {
     message = "Hello json".toUpperCase();
+    console.log("MESSAGE_STYLE:", process.env.MESSAGE_STYLE);
+
   }
 
   res.json({ message });
