@@ -9,7 +9,7 @@ const publicRepo = path.join(__dirname, "public");
 app.use("/json", express.static(publicRepo));
 
 const handler = (req, res) => {
-  const message = "Hello json";
+  const message = "HELLO JSON";
 
   if (process.env.MESSAGE_STYLE === "HELLO JSON") {
     message = "Hello json".toUpperCase();
