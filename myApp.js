@@ -5,24 +5,16 @@ const app = express();
 const path = require("path");
 
 const publicRepo = path.join(__dirname, "public");
-
 app.use("/json", express.static(publicRepo));
 
-
-const handler = (req, res) => {
-  
+app.get("/json", (req, res) => {
   let message = "Hello json";
 
-  if (process.env.MESSAGE_STYLE == "uppercase") {
+  if (process.env.MESSAGE_STYLE === "uppercase") {
     message = message.toUpperCase();
-    
-    res.json({ message });
   }
 
-  
-};
-
-
-app.get("/json", handler);
+  res.json({ message });
+});
 
 module.exports = app;
